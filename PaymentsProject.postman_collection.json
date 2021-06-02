@@ -1,0 +1,56 @@
+{
+	"info": {
+		"_postman_id": "7a838e3f-ba6c-409a-a89b-4d51a2ad722f",
+		"name": "PaymentsProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "EAAAEAej-9h2riePqx8HvXvQRmGHQy8DIzWGQmdUvE_ZlRGlPmrhhqZD5dQvOwVx",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Square-Version",
+						"value": "2021-05-13",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"idempotency_key\": \"38ea5330-aacb-4818-ab57-790890d51152\",\r\n    \"amount_money\": {\r\n        \"amount\": 200,\r\n        \"currency\": \"USD\"\r\n    },\r\n    \"source_id\": \"cnon:card-nonce-ok\",\r\n    \"autocomplete\": true,\r\n    \"customer_id\": \"VDKXEEKPJN48QDG3BGGFAK05P8\",\r\n    \"location_id\": \"XK3DBG77NJBFX\",\r\n    \"reference_id\": \"123456\",\r\n    \"note\": \"Brief description\",\r\n    \"app_fee_money\": {\r\n        \"amount\": 10,\r\n        \"currency\": \"USD\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://connect.squareup.com/v2/payments/",
+					"protocol": "https",
+					"host": [
+						"connect",
+						"squareup",
+						"com"
+					],
+					"path": [
+						"v2",
+						"payments",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
